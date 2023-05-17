@@ -7,6 +7,8 @@ import Login from './components/Login/Login.jsx'
 import Register from './components/Register/Register.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import AuthProviders from './providers/AuthProviders'
+import PrivateRoute from './routes/PrivateRoute'
+import Orders from './components/Orders/Orders'
 
 const router = createBrowserRouter([
   {
@@ -20,6 +22,10 @@ const router = createBrowserRouter([
       {
         path: "/login",
         element: <Login></Login>
+      },
+      {
+        path: "/orders",
+        element: <PrivateRoute><Orders></Orders></PrivateRoute>
       },
       {
         path: "/register",

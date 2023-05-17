@@ -18,6 +18,7 @@ const Header = () => {
             <div className="navbar bg-primary text-primary-content">
                 <Link className="btn btn-ghost normal-case text-xl">Auth master</Link>
                 <Link className="btn btn-ghost normal-case text-xl" to="/">Home</Link>
+                <Link className="btn btn-ghost normal-case text-xl" to="/orders">Orders</Link>
                 <Link className="btn btn-ghost normal-case text-xl" to="/login">Login</Link>
                 <Link className="btn btn-ghost normal-case text-xl" to="/register">Register</Link>
                 {user?<><span>{user.email}</span><button className="btn btn-xs" onClick={handleLogOut}>sign Out</button></>:<Link to="/login"><button className="btn btn-xs">Login</button></Link>}
